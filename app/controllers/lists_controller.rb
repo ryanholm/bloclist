@@ -25,11 +25,19 @@ class ListsController < ApplicationController
   end
 
   def update
+    @list = List.find(params[:id])
+    if @list.update_attributes(list_params)
+      flash[:notice] = "List was updated."
+      return redirect_to list_url(@list)
+    else
+      flash[:error] = "You messed it up idiot."
+      return render :edit
+    end
   end
 
 # - need to be able to show a list
   def show
-    @list = List.find(params[:id ])
+    @list = List.find(params[:id])
   end
 # - need to be able to destroy a list
   def destroy

@@ -46,3 +46,8 @@ end
 
 # Devise User Authentication
 gem 'devise'
+
+#getbootstrap.com
+gem 'bootstrap-sass', '~>3.1.1'
+
+

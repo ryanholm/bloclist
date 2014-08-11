@@ -1,0 +1,13 @@
+ <div class="row">
+   <div class="col-md-8">
+     <%= form_for @list do |f| %>
+       <div class="form-group">
+         <%= f.label :name %>
+         <%= f.text_field :name, rows: 8, class: 'form-control', placeholder: "Enter List Message" %>
+       </div>
+       <div class="form-group">
+         <%= f.submit "commit", class: 'btn btn-success .btn-lg' %>
+       </div>
+     <% end %>
+   </div>
+ </div>
