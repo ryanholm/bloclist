@@ -14,6 +14,8 @@
 ActiveRecord::Schema.define(version: 20140812053706) do
 
   create_table "items", force: true do |t|
+    t.integer  "list_id"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

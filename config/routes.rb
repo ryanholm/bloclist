@@ -54,6 +54,9 @@ Bloclist::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
 
-  resources :lists
+  resources :lists do
+    resources :items
+  end
+
   #   end
 end

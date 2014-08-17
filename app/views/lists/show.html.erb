@@ -1,1 +1,8 @@
-<%= params %>
+<h1><%= @list.name %></h1>
+<table class='table table-striped'>
+  <tbody>
+    <%= render @list.items %> 
+  </tbody>
+</table>
+
+<%= link_to 'New Item', new_list_item_url(list_id: @list.id) %>

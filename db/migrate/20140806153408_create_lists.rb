@@ -4,6 +4,7 @@ class CreateLists < ActiveRecord::Migration
       t.references :user
       t.string     :name
 
+
       t.timestamps
     end
   end
